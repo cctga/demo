@@ -1,0 +1,53 @@
+### jdbc
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/web?serverTimezone=UTC
+    username: root
+    password: Hello.001
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #初始化连接数个数
+      initial-size: 5
+      #空闲的连接数个数
+      min-idle: 5
+      #最大连接数个数
+      max-active: 20
+      #获取连接最大等待时间
+      max-wait: 60000
+      #释放连接到连接池时，是否检测连接可用性，开启性能会有些许影响
+      test-on-return: false
+      #从连接池获取连接时，是否检测连接可用性，开启性能会有些许影响
+      test-on-borrow: false
+      #检测连接时间，单位毫秒
+      time-between-eviction-runs-millis: 60000
+      #检测未关闭连接大于该值则关闭连接，单位毫秒
+      min-evictable-idle-time-millis: 300000
+      #系统启动时通过该sql语句验证数据库是否可用，例如oracle用SELECT 'x' from dual，mysql用SELECT 'x'
+      validation-query: SELECT 'x'
+      #配置连接的一些属性，这里配置的config.decrypt=true，表示提供的密码是加密过的
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      #启用空闲连接检测，以便回收
+      test-while-idle: true
+      #开启psCache缓存，oracle请设置为true，非oracle请设置为false
+      pool-prepared-statements: true
+      #最大缓存数，非oracle请设置为0
+      max-pool-prepared-statement-per-connection-size: 0
+      #就是一个拦截器，可配置监控、日志等 stat,wall,log4j
+      filters: stat,wall
+#      use-global-data-source-stat: true
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+    prefix: classpath:/templates/
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+
+logging:
+  config: classpath:log4j2.xml

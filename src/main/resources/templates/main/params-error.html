@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>参数非法</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>参数名称</td>
+        <td>参数值</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="k,v:${params}">
+        <td th:text="${v.current.key}"></td>
+        <td th:text="${#strings.arrayJoin(v.current.value,',')}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
