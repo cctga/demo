@@ -3,6 +3,9 @@ package com.wirk.demo.tools.plan;
 import com.wirk.demo.tools.base.Bag;
 import com.wirk.demo.tools.base.In;
 
+/**
+ * 图
+ */
 public class Graph {
   private final int V;
   private int E;
