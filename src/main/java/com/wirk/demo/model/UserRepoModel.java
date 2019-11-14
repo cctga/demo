@@ -6,16 +6,16 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "user")
+@Table(name = "sys_t_user")
 public class UserRepoModel implements Serializable {
 
   @Id private String userId;
-  private String username;
-  private String pwd;
+  private String userName;
+  private String password;
   private String email;
-  private String intro;
-  private String photo;
-  private String createTime;
+  private String roleId;
+  private String userStatus;
+  private String lastUpdatePwdTime;
 
   public String getUserId() {
     return userId;
@@ -25,20 +25,20 @@ public class UserRepoModel implements Serializable {
     this.userId = userId;
   }
 
-  public String getUsername() {
-    return username;
+  public String getUserName() {
+    return userName;
   }
 
-  public void setUsername(String username) {
-    this.username = username;
+  public void setUserName(String userName) {
+    this.userName = userName;
   }
 
-  public String getPwd() {
-    return pwd;
+  public String getPassword() {
+    return password;
   }
 
-  public void setPwd(String pwd) {
-    this.pwd = pwd;
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public String getEmail() {
@@ -49,54 +49,40 @@ public class UserRepoModel implements Serializable {
     this.email = email;
   }
 
-  public String getIntro() {
-    return intro;
+  public String getRoleId() {
+    return roleId;
   }
 
-  public void setIntro(String intro) {
-    this.intro = intro;
+  public void setRoleId(String roleId) {
+    this.roleId = roleId;
   }
 
-  public String getPhoto() {
-    return photo;
+  public String getUserStatus() {
+    return userStatus;
   }
 
-  public void setPhoto(String photo) {
-    this.photo = photo;
+  public void setUserStatus(String userStatus) {
+    this.userStatus = userStatus;
   }
 
-  public String getCreateTime() {
-    return createTime;
+  public String getLastUpdatePwdTime() {
+    return lastUpdatePwdTime;
   }
 
-  public void setCreateTime(String createTime) {
-    this.createTime = createTime;
+  public void setLastUpdatePwdTime(String lastUpdatePwdTime) {
+    this.lastUpdatePwdTime = lastUpdatePwdTime;
   }
 
   @Override
   public String toString() {
-    return "UserRepoModel{"
-        + "userId='"
-        + userId
-        + '\''
-        + ", username='"
-        + username
-        + '\''
-        + ", pwd='"
-        + pwd
-        + '\''
-        + ", email='"
-        + email
-        + '\''
-        + ", intro='"
-        + intro
-        + '\''
-        + ", photo='"
-        + photo
-        + '\''
-        + ", createTime='"
-        + createTime
-        + '\''
-        + '}';
+    return "UserRepoModel{" +
+               "userId='" + userId + '\'' +
+               ", userName='" + userName + '\'' +
+               ", password='" + password + '\'' +
+               ", email='" + email + '\'' +
+               ", roleId='" + roleId + '\'' +
+               ", userStatus='" + userStatus + '\'' +
+               ", lastUpdatePwdTime='" + lastUpdatePwdTime + '\'' +
+               '}';
   }
 }

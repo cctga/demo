@@ -1,7 +1,7 @@
 ### jdbc
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/web?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/line_monitor?serverTimezone=UTC
     username: root
     password: Hello.001
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -47,7 +47,20 @@ spring:
     database: 0
     host: localhost
     port: 6379
+    #空密码
     password:
+  mail:
+    host: smtp.163.com
+    username: 15726817106@163.com
+    password: Qq1135892360
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
 
 logging:
   config: classpath:log4j2.xml
