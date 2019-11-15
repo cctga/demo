@@ -64,3 +64,10 @@ spring:
 
 logging:
   config: classpath:log4j2.xml
+
+task:
+  pool:
+    size: 20
+    maxSize: 40
+    keepAliveSeconds: 300
+    queueCapacity: 50

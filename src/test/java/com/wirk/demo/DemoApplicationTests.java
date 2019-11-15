@@ -1,5 +1,6 @@
 package com.wirk.demo;
 
+import com.wirk.demo.config.async.ExecutePoolConfig;
 import com.wirk.demo.model.UserModel;
 import com.wirk.demo.model.UserRepoModel;
 import com.wirk.demo.server.UserService;
@@ -17,6 +18,8 @@ import java.util.stream.Collectors;
 
 @SpringBootTest
 class DemoApplicationTests {
+
+  @Resource private ExecutePoolConfig executePoolConfig;
 
   @Resource private JdbcTemplate jdbcTemplate;
 
@@ -65,5 +68,10 @@ class DemoApplicationTests {
     System.out.println(all1.get().collect(Collectors.toList()));
     List<UserRepoModel> es = userService.findByNameLike("%est%");
     System.out.println(es);
+  }
+
+  @Test
+  void testExecuter(){
+    System.out.println(executePoolConfig);
   }
 }
