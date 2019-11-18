@@ -61,6 +61,13 @@ spring:
           starttls:
             enable: true
             required: true
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: true
+    packages:
+      trust-all: true
 
 logging:
   config: classpath:log4j2.xml

@@ -1,9 +1,12 @@
 package com.wirk.demo;
 
 import com.wirk.demo.config.async.ExecutePoolConfig;
+import com.wirk.demo.model.MoodRepoModel;
 import com.wirk.demo.model.UserModel;
 import com.wirk.demo.model.UserRepoModel;
+import com.wirk.demo.server.MoodService;
 import com.wirk.demo.server.UserService;
+import com.wirk.demo.util.SnowflakeIdWorker;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -24,6 +27,10 @@ class DemoApplicationTests {
   @Resource private JdbcTemplate jdbcTemplate;
 
   @Resource private UserService userService;
+
+  @Resource private MoodService moodService;
+
+  @Resource private SnowflakeIdWorker snowflakeIdWorker;
 
   @Resource private RedisTemplate rt;
 
@@ -73,5 +80,16 @@ class DemoApplicationTests {
   @Test
   void testExecuter(){
     System.out.println(executePoolConfig);
+  }
+
+  @Test
+  void testRepository2(){
+    MoodRepoModel mood = new MoodRepoModel();
+    mood.setId(String.valueOf(snowflakeIdWorker.nextId()));
+    mood.setUserId("11");
+    mood.setContent("今天的第一条说说.");
+    mood.setPraiseNum("0");
+    mood.setPublishTime("2019-11-18 22:01:23");
+    moodService.save(mood);
   }
 }
