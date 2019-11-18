@@ -1,5 +1,6 @@
 package com.wirk.demo;
 
+import com.wirk.demo.activemq.MoodProducer;
 import com.wirk.demo.config.async.ExecutePoolConfig;
 import com.wirk.demo.model.MoodRepoModel;
 import com.wirk.demo.model.UserModel;
@@ -7,6 +8,7 @@ import com.wirk.demo.model.UserRepoModel;
 import com.wirk.demo.server.MoodService;
 import com.wirk.demo.server.UserService;
 import com.wirk.demo.util.SnowflakeIdWorker;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
@@ -16,6 +18,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.annotation.Resource;
+import javax.jms.Destination;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,9 +35,11 @@ class DemoApplicationTests {
 
   @Resource private SnowflakeIdWorker snowflakeIdWorker;
 
-  @Resource private RedisTemplate rt;
+  @Resource private RedisTemplate redisTemplate;
 
-  @Resource private StringRedisTemplate srt;
+  @Resource private StringRedisTemplate stringRedisTemplate;
+
+  @Resource private MoodProducer moodProducer;
 
   @Test
   void contextLoads() {}
@@ -90,6 +95,13 @@ class DemoApplicationTests {
     mood.setContent("今天的第一条说说.");
     mood.setPraiseNum("0");
     mood.setPublishTime("2019-11-18 22:01:23");
-    moodService.save(mood);
+    MoodRepoModel save = moodService.save(mood);
+    System.out.println(save);
+  }
+
+  @Test
+  void testActiveMq(){
+    Destination activeMQQueue = new ActiveMQQueue("user.queue");
+    moodProducer.sendMessage(activeMQQueue,"hello,mq!");
   }
 }

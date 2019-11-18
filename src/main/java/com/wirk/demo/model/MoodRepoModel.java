@@ -53,4 +53,15 @@ public class MoodRepoModel {
   public void setPublishTime(String publishTime) {
     this.publishTime = publishTime;
   }
+
+  @Override
+  public String toString() {
+    return "MoodRepoModel{" +
+               "id='" + id + '\'' +
+               ", content='" + content + '\'' +
+               ", userId='" + userId + '\'' +
+               ", praiseNum='" + praiseNum + '\'' +
+               ", publishTime='" + publishTime + '\'' +
+               '}';
+  }
 }
