@@ -1,5 +1,7 @@
 package com.wirk.demo.server.impl;
 
+import com.wirk.demo.mapper.UserMapper;
+import com.wirk.demo.model.UserModel;
 import com.wirk.demo.model.UserRepoModel;
 import com.wirk.demo.repository.UserRepository;
 import com.wirk.demo.server.UserService;
@@ -14,6 +16,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
   @Resource private UserRepository userRepository;
+  @Resource
+  private UserMapper userMapper;
 
   @Override
   public UserRepoModel findById(String userId) {
@@ -53,5 +57,10 @@ public class UserServiceImpl implements UserService {
   @Override
   public List<UserRepoModel> findByUserIdIn(String[] ids) {
     return userRepository.findByUserIdIn(ids);
+  }
+
+  @Override
+  public UserModel findByNameAndPwd(String name, String pwd) {
+    return userMapper.findByNameAndPwd(name, pwd);
   }
 }

@@ -71,3 +71,9 @@ task:
     maxSize: 40
     keepAliveSeconds: 300
     queueCapacity: 50
+
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.wirk.demo.model
+  configuration:
+    map-underscore-to-camel-case: true

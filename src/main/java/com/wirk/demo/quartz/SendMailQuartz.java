@@ -30,7 +30,7 @@ public class SendMailQuartz {
   @Resource
   private UserService userService;
 
-  @Scheduled(cron = "0/5 * * * * ?")
+//  @Scheduled(cron = "0/5 * * * * ?")
   public void run1() throws MessagingException {
     List<UserRepoModel> all = userService.findAll();
     logger.info("定时器给所有用户发送邮件！");
