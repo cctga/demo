@@ -75,14 +75,28 @@ public class UserRepoModel implements Serializable {
 
   @Override
   public String toString() {
-    return "UserRepoModel{" +
-               "userId='" + userId + '\'' +
-               ", userName='" + userName + '\'' +
-               ", password='" + password + '\'' +
-               ", email='" + email + '\'' +
-               ", roleId='" + roleId + '\'' +
-               ", userStatus='" + userStatus + '\'' +
-               ", lastUpdatePwdTime='" + lastUpdatePwdTime + '\'' +
-               '}';
+    return "UserRepoModel{"
+        + "userId='"
+        + userId
+        + '\''
+        + ", userName='"
+        + userName
+        + '\''
+        + ", password='"
+        + password
+        + '\''
+        + ", email='"
+        + email
+        + '\''
+        + ", roleId='"
+        + roleId
+        + '\''
+        + ", userStatus='"
+        + userStatus
+        + '\''
+        + ", lastUpdatePwdTime='"
+        + lastUpdatePwdTime
+        + '\''
+        + '}';
   }
 }
