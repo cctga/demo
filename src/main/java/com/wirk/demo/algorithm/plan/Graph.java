@@ -1,7 +1,7 @@
-package com.wirk.demo.tools.plan;
+package com.wirk.demo.algorithm.plan;
 
-import com.wirk.demo.tools.base.Bag;
-import com.wirk.demo.tools.base.In;
+import com.wirk.demo.algorithm.base.Bag;
+import com.wirk.demo.algorithm.base.In;
 
 /**
  * 图

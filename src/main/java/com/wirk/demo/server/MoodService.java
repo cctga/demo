@@ -5,4 +5,6 @@ import com.wirk.demo.model.MoodRepoModel;
 public interface MoodService {
 
   MoodRepoModel save(MoodRepoModel mood);
+
+  boolean asyncSave(MoodRepoModel mood);
 }

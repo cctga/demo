@@ -3,16 +3,21 @@ package com.wirk.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 @Entity
 @Table(name = "mood")
-public class MoodRepoModel {
+public class MoodRepoModel implements Serializable {
+
+  private static final long serialVersionUID = 1L;
 
   @Id private String id;
   private String content;
   private String userId;
   private String praiseNum;
-  private String publishTime;
+  private Date publishTime;
 
   public String getId() {
     return id;
@@ -46,11 +51,11 @@ public class MoodRepoModel {
     this.praiseNum = praiseNum;
   }
 
-  public String getPublishTime() {
+  public Date getPublishTime() {
     return publishTime;
   }
 
-  public void setPublishTime(String publishTime) {
+  public void setPublishTime(Date publishTime) {
     this.publishTime = publishTime;
   }
 

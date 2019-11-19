@@ -19,6 +19,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.annotation.Resource;
 import javax.jms.Destination;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -94,7 +95,7 @@ class DemoApplicationTests {
     mood.setUserId("11");
     mood.setContent("今天的第一条说说.");
     mood.setPraiseNum("0");
-    mood.setPublishTime("2019-11-18 22:01:23");
+    mood.setPublishTime(new Date());
     MoodRepoModel save = moodService.save(mood);
     System.out.println(save);
   }
@@ -103,5 +104,20 @@ class DemoApplicationTests {
   void testActiveMq(){
     Destination activeMQQueue = new ActiveMQQueue("user.queue");
     moodProducer.sendMessage(activeMQQueue,"hello,mq!");
+  }
+
+  @Test
+  void testActiveMq2(){
+    MoodRepoModel mood = new MoodRepoModel();
+    mood.setId(String.valueOf(snowflakeIdWorker.nextId()));
+    mood.setUserId("11");
+    mood.setContent("今天的第一条说说.");
+    mood.setPraiseNum("0");
+    mood.setPublishTime(new Date());
+    boolean saveSuccess = moodService.asyncSave(mood);
+    if(saveSuccess){
+      System.out.println("异步发表说说成功!");
+      System.out.println(mood);
+    }
   }
 }
