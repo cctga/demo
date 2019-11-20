@@ -1,6 +1,5 @@
 package com.wirk.demo.activemq;
 
-import com.wirk.demo.enums.ActMQQueueEnum;
 import com.wirk.demo.model.MoodRepoModel;
 import com.wirk.demo.server.MoodService;
 import org.springframework.jms.annotation.JmsListener;
