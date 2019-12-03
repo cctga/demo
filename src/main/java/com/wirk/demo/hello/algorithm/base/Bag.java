@@ -1,4 +1,4 @@
-package com.wirk.demo.algorithm.base;
+package com.wirk.demo.hello.algorithm.base;
 /**
  * **************************************************************************** Compilation: javac
  * Bag.java Execution: java Bag < input.txt Dependencies: StdIn.java StdOut.java

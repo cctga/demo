@@ -1,4 +1,4 @@
-package com.wirk.demo.algorithm.base;
+package com.wirk.demo.hello.algorithm.base;
 /**
  * **************************************************************************** Compilation: javac
  * In.java Execution: java In (basic test --- see source for required files) Dependencies: none
