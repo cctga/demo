@@ -1,6 +1,7 @@
 package com.wirk.demo.hello.design.ornament;
 
 /**
+ * 抽象接口
  * @author : Mao LuDong
  * @date : Created in 14:14 2019/12/2
  */

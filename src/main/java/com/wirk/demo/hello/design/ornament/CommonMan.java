@@ -1,7 +1,7 @@
 package com.wirk.demo.hello.design.ornament;
 
 /**
- * 被装饰器
+ * 被装饰类
  * @author : Mao LuDong
  * @date : Created in 14:15 2019/12/2
  */
