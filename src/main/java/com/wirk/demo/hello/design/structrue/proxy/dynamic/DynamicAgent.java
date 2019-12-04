@@ -1,7 +1,7 @@
-package com.wirk.demo.hello.design.proxy.dynamic;
+package com.wirk.demo.hello.design.structrue.proxy.dynamic;
 
-import com.wirk.demo.hello.design.proxy.Landord;
-import com.wirk.demo.hello.design.proxy.Person;
+import com.wirk.demo.hello.design.structrue.proxy.Landord;
+import com.wirk.demo.hello.design.structrue.proxy.Person;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

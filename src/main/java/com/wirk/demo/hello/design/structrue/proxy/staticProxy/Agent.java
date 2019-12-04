@@ -1,7 +1,7 @@
-package com.wirk.demo.hello.design.proxy.staticProxy;
+package com.wirk.demo.hello.design.structrue.proxy.staticProxy;
 
-import com.wirk.demo.hello.design.proxy.Landord;
-import com.wirk.demo.hello.design.proxy.Person;
+import com.wirk.demo.hello.design.structrue.proxy.Landord;
+import com.wirk.demo.hello.design.structrue.proxy.Person;
 
 /**
  * 静态代理

@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.ornament;
+package com.wirk.demo.hello.design.structrue.ornament;
 
 /**
  * 被装饰类

@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.ornament;
+package com.wirk.demo.hello.design.structrue.ornament;
 
 /**
  * 测试装饰模式

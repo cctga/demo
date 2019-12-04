@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.ornament;
+package com.wirk.demo.hello.design.structrue.ornament;
 
 /**
  * 飞翔装饰器

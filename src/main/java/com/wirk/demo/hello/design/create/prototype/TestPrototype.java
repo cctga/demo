@@ -1,8 +1,8 @@
 package com.wirk.demo.hello.design.create.prototype;
 
-import com.wirk.demo.hello.design.builder.Computer;
-import com.wirk.demo.hello.design.builder.MacBookProBuilder;
-import com.wirk.demo.hello.design.builder.Seller;
+import com.wirk.demo.hello.design.create.builder.Computer;
+import com.wirk.demo.hello.design.create.builder.MacBookProBuilder;
+import com.wirk.demo.hello.design.create.builder.Seller;
 
 /**
  * 测试原型模式
@@ -17,7 +17,7 @@ public class TestPrototype {
     peopleClone.setComputer(comp);
     DeepClone clone = peopleClone.clone();
     System.out.println(clone);
-    peopleClone.setName("xxxxx");
+    peopleClone.setName("xxxix");
     System.out.println(clone);
   }
 }

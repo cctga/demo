@@ -1,8 +1,7 @@
-package com.wirk.demo.hello.design.proxy.dynamic;
+package com.wirk.demo.hello.design.structrue.proxy.dynamic;
 
-import com.wirk.demo.hello.design.proxy.Landord;
-import com.wirk.demo.hello.design.proxy.Person;
-import com.wirk.demo.hello.design.proxy.staticProxy.Agent;
+import com.wirk.demo.hello.design.structrue.proxy.Landord;
+import com.wirk.demo.hello.design.structrue.proxy.Person;
 
 /**
  * 测试动态代理类

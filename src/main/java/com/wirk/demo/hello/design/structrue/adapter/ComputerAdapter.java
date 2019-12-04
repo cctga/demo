@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.adapter;
+package com.wirk.demo.hello.design.structrue.adapter;
 
 /**
  * 适配器

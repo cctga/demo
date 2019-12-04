@@ -1,6 +1,4 @@
-package com.wirk.demo.hello.design.proxy;
-
-import com.wirk.demo.hello.design.proxy.Person;
+package com.wirk.demo.hello.design.structrue.proxy;
 
 /**
  * 房东

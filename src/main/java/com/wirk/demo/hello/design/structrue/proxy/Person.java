@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.proxy;
+package com.wirk.demo.hello.design.structrue.proxy;
 
 /**
  * 抽象：出租的人
