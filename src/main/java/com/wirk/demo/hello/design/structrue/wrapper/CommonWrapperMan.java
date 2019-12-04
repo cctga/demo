@@ -1,4 +1,4 @@
-package com.wirk.demo.hello.design.structrue.ornament;
+package com.wirk.demo.hello.design.structrue.wrapper;
 
 /**
  * 装饰器父类
