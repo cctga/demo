@@ -1,6 +1,6 @@
-package com.wirk.demo.hello.design.prototype;
+package com.wirk.demo.hello.design.create.prototype;
 
-import com.wirk.demo.hello.design.builder.Computer;
+import com.wirk.demo.hello.design.create.builder.Computer;
 
 /**
  * 原型模式又称为克隆模式😄

@@ -1,11 +1,13 @@
-package com.wirk.demo.hello.design.builder;
+package com.wirk.demo.hello.design.create.builder;
+
+import java.io.Serializable;
 
 /**
  * 建造模式使用的产品类，实现克隆接口为了在原型模式中使用
  * @author : Mao LuDong
  * @date : Created in 9:40 2019/12/4
  */
-public class Computer implements Cloneable{
+public class Computer implements Cloneable,Serializable{
   private String CPU;
   private String GPU;
   private String memory;

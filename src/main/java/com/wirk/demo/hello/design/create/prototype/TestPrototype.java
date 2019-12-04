@@ -1,20 +1,23 @@
-package com.wirk.demo.hello.design.prototype;
+package com.wirk.demo.hello.design.create.prototype;
 
 import com.wirk.demo.hello.design.builder.Computer;
 import com.wirk.demo.hello.design.builder.MacBookProBuilder;
 import com.wirk.demo.hello.design.builder.Seller;
 
 /**
+ * 测试原型模式
  * @author : Mao LuDong
  * @date : Created in 11:27 2019/12/4
  */
 public class TestPrototype {
-  public static void main(String[] args) throws CloneNotSupportedException {
-    PeopleClone peopleClone = new PeopleClone();
-    peopleClone.setName("maoludong");
+  public static void main(String[] args) {
+    DeepClone peopleClone = new DeepClone();
+    peopleClone.setName("marauding");
     Computer comp = new Seller(new MacBookProBuilder()).sell();
     peopleClone.setComputer(comp);
-    PeopleClone clone = peopleClone.clone();
+    DeepClone clone = peopleClone.clone();
+    System.out.println(clone);
+    peopleClone.setName("xxxxx");
     System.out.println(clone);
   }
 }
