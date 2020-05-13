@@ -28,9 +28,11 @@ public class UserListener implements ServletContextListener {
     logger.debug("项目初始化");
     logger.debug("用户Redis的缓存");
     List<UserRepoModel> allUser = userService.findAll();
-    redisTemplate.opsForList().leftPushAll(ALL_USER, allUser);
-    List<UserRepoModel> range = redisTemplate.opsForList().range(ALL_USER, 0, -1);
-    System.out.println(range);
+    if (allUser != null && allUser.size()>0) {
+      redisTemplate.opsForList().leftPushAll(ALL_USER, allUser);
+      List<UserRepoModel> range = redisTemplate.opsForList().range(ALL_USER, 0, -1);
+      System.out.println(range);
+    }
 //    redisTemplate.delete(ALL_USER);
     logger.debug(sce);
   }

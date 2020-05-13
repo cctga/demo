@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
  * @author : Mao LuDong
  * @date : Created in 15:13 2019/11/15
  */
-@Component
+//@Component
 public class AsyncTask {
 
   private static final Logger log = LogManager.getLogger(AsyncTask.class);

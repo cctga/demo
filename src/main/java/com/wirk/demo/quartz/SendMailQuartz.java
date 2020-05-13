@@ -18,8 +18,8 @@ import java.util.List;
  * @author : Mao LuDong
  * @date : Created in 11:14 2019/11/14
  */
-@Configuration
-@EnableScheduling
+//@Configuration
+//@EnableScheduling
 public class SendMailQuartz {
 
   private final Logger logger = LogManager.getLogger(this.getClass());

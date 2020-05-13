@@ -1,5 +1,6 @@
 package com.wirk.demo.controller;
 
+import com.wirk.demo.config.error.ErrorConfig;
 import com.wirk.demo.model.UserModel;
 import com.wirk.demo.model.UserRepoModel;
 import com.wirk.demo.server.UserService;

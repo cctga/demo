@@ -16,7 +16,7 @@ import java.util.List;
  * @author : Mao LuDong
  * @date : Created in 10:35 2019/11/15
  */
-@Service("sendJunkMailService")
+//@Service("sendJunkMailService")
 public class SendJunkMailServiceImpl implements SendJunkMailService {
 
   public static final Logger logger = LogManager.getLogger(SendJunkMailServiceImpl.class);

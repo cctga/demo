@@ -43,41 +43,41 @@ spring:
       content-type: text/html
     cache: false
     prefix: classpath:/templates/
-  redis:
-    database: 0
-    host: localhost
-    port: 6379
-    #空密码
-    password:
-  mail:
-    host: smtp.163.com
-    username: 15726817106@163.com
-    password: Qq1135892360
-    default-encoding: UTF-8
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-            required: true
-  activemq:
-    broker-url: tcp://localhost:61616
-    in-memory: true
-    pool:
-      enabled: false
-    packages:
-      trust-all: true
+#  redis:
+#    database: 0
+#    host: localhost
+#    port: 6379
+#    #空密码
+#    password:
+#  mail:
+#    host: smtp.163.com
+#    username: 15726817106@163.com
+#    password: Qq1135892360
+#    default-encoding: UTF-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#  activemq:
+#    broker-url: tcp://localhost:61616
+#    in-memory: true
+#    pool:
+#      enabled: false
+#    packages:
+#      trust-all: true
 
 logging:
   config: classpath:log4j2.xml
 
-task:
-  pool:
-    size: 20
-    maxSize: 40
-    keepAliveSeconds: 300
-    queueCapacity: 50
+#task:
+#  pool:
+#    size: 20
+#    maxSize: 40
+#    keepAliveSeconds: 300
+#    queueCapacity: 50
 
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml

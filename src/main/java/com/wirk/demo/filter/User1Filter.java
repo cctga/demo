@@ -32,12 +32,13 @@ public class User1Filter implements Filter {
     logger.debug("------------------>>>>>>>filter1");
     request.setAttribute("hello", 'c');
     Map<String, String[]> parameterMap = request.getParameterMap();
-    if (parameterMap.get("name")[0].equals("xxx")) {
-      HttpServletRequest req = ((HttpServletRequest) request);
-      req.getRequestDispatcher("/main/paramsError").forward(request,response);
-    } else {
-      chain.doFilter(request, response);
-    }
+//    if (parameterMap.get("name")[0].equals("xxx")) {
+//      HttpServletRequest req = ((HttpServletRequest) request);
+//      req.getRequestDispatcher("/main/paramsError").forward(request,response);
+//    } else {
+//      chain.doFilter(request, response);
+//    }
+    chain.doFilter(request, response);
   }
 
   @Override

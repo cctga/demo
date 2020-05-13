@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>用户信息页</title>
@@ -12,25 +12,6 @@
     <p>Try Element</p>
   </el-dialog>
 </div>
-<table>
-  <thead>
-  <tr>
-    <td>用户名</td>
-    <td>密码</td>
-    <td>邮箱</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="user:${users}">
-    <td th:text="${user.userName}"></td>
-    <td th:text="${user.password}"></td>
-    <td th:text="${user.email}"></td>
-  </tr>
-  </tbody>
-  <div>
-    <span></span>
-  </div>
-</table>
 </body>
 
 <script src="/element-ui/vue.js"></script>
